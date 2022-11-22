@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function SelectionMenu({nickname, handleSelection}) {
-
+// renders the choice of game
     return (
         <div>
             <h1>Welcome {nickname}!</h1>
