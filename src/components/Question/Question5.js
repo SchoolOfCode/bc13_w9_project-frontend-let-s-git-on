@@ -1,5 +1,6 @@
 import React from "react";
 import './Question5.css';
+import images from '../../images/button.png';
 
 export default function Question5({handleAnswer, handleNextQuestion}) {
     return (
@@ -12,7 +13,14 @@ export default function Question5({handleAnswer, handleNextQuestion}) {
     <button onClick={handleAnswer} id='29' className="Q5SecondThreeBtn">Loz</button>
     <button onClick={handleAnswer} id='30' className="Q5SecondThreeBtn">Jessica</button>
 
-    <button onClick={handleNextQuestion} className="nextBtn">next</button>
+    <button onClick={handleNextQuestion} className="nextBtn">Submit</button>
+
+    <img src= {images} className='buttonblue'alt='buttonblue'/>
+    <img src= {images} className='buttonblue2'alt='buttonblue'/>
+    <img src= {images} className='buttonblue3'alt='buttonblue'/>
+    <img src= {images} className='buttonblue4'alt='buttonblue'/>
+    <img src= {images} className='buttonblue5'alt='buttonblue'/>
+    <img src= {images} className='buttonblue6'alt='buttonblue'/>
     </div>
     )
 }

@@ -1,5 +1,9 @@
 import React from "react";
-import './Question.css';
+import './Question1.css'
+import images from '../../images/bear.png';
+import images2 from '../../images/bull.png';
+import images3 from '../../images/elephant.png';
+import images4 from '../../images/wolf.png';
 
 export default function Question1({handleNextQuestion, handleAnswer}) {
     return (
@@ -14,6 +18,14 @@ export default function Question1({handleNextQuestion, handleAnswer}) {
         <button onClick={handleAnswer} id='6' className="SecondThreeBtn">Kangaroo</button>
 
         <button onClick={handleNextQuestion} className="nextBtn">next</button>
+
+        <img src= {images} className='bear-image'alt='bear'/>
+        <img src= {images} className='bear-image2'alt='bear'/>
+        <img src= {images} className='bear-image3'alt='bear'/>
+        <img src= {images2} className='bull'alt='bull'/>
+        <img src= {images3} className='elephant'alt='elephant'/>
+        <img src= {images3} className='elephant2'alt='elephant'/>
+        <img src= {images4} className='wolf'alt='wolf'/>
         </div>
     )
 }

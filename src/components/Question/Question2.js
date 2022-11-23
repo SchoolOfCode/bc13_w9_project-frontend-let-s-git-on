@@ -1,5 +1,8 @@
 import React from "react";
-import './Question.css';
+import './Question2.css';
+import images from '../../images/smile green.png';
+
+
 
 export default function Question2({handleAnswer, handleNextQuestion}) {
     return (
@@ -14,6 +17,12 @@ export default function Question2({handleAnswer, handleNextQuestion}) {
         <button onClick={handleAnswer} id='12' className="Q2SecondThreeBtn">Anime</button>
     
         <button onClick={handleNextQuestion} className="nextBtn">next</button>
+        <img src= {images} className='smilegreen'alt='smilegreen'/>
+        <img src= {images} className='smilegreen2'alt='smilegreen'/>
+        <img src= {images} className='smilegreen3'alt='smilegreen'/>
+        <img src= {images} className='smilegreen5'alt='smilegreen'/>
+        <img src= {images} className='smilegreen6'alt='smilegreen'/>
+        <img src= {images} className='smilegreen7'alt='smilegreen'/>
         </div>
     )
 }

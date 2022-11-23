@@ -1,5 +1,5 @@
 import React from "react";
-import './Question.css';
+import './Question3.css'
 
 export default function Question3({handleAnswer, handleNextQuestion}) {
     return (

@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Russo+One&display=swap');
+
+.Q3{
+    text-align: center;
+    margin:0;
+    padding: 200px 250px 50px 330px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px ;
+    color: blueviolet; 
+    animation: bounce-in-right 2s linear;
+}
+@keyframes bounce-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-30px);
+  }
+  80% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.Q3firstThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    right:90px;
+    border: 2.5px blueviolet solid;
+    color: white;
+    background-color: black;
+    
+}
+.Q3SecondThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    left:170px;
+    bottom: 155px;
+    border: 2.5px blueviolet solid;
+    color: white;
+    background-color:black;
+}
+.Q3firstThreeBtn:hover, .Q3firstThreeBtn:active, .Q3firstThreeBtn:focus{
+    background-color: blueviolet;
+
+}
+.Q3SecondThreeBtn:hover, .Q3SecondThreeBtn:active, .Q3SecondThreeBtn:focus{
+    background-color: blueviolet;
+
+}
+

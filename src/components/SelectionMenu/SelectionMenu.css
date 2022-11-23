@@ -81,8 +81,15 @@
     
     color: white;
     background-color: black;
-    border: 2px white solid;   
-  }
+    border: 2px white solid; 
+    animation: bounce2 1.5s ease infinite;
+      }
+      @keyframes bounce2 {
+          0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+          40% {transform: translateY(-30px);}
+          60% {transform: translateY(-15px);}
+      }  
+ 
 
 /* #energiser:hover{
     
