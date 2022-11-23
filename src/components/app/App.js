@@ -24,11 +24,15 @@ function App() {
 
 const response = await fetch ("http://localhost:3000/api/players",{
   method: 'POST', 
+  headers: {
+    'Accept': 'application/json',
   'Content-Type': 'application/json',
+  },
   body: JSON.stringify(nameobject)
     }
   )
-  return response.json()
+  // console.log (response)
+  // return response.json()
 }
 
   // async function getPlayers() {
@@ -47,7 +51,7 @@ const response = await fetch ("http://localhost:3000/api/players",{
     //post nickname to localhost backend needed here
     //updates state underneath - we need this even when the localhost request is working as the state controls what is rendered in the app
     setNickname(value);
-    sendName(nickname)
+    sendName(value)
 
   }
 
