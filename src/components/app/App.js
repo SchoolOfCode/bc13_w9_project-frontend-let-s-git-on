@@ -7,6 +7,7 @@ import Question2 from '../Question/Question2';
 import Question3 from '../Question/Question3';
 import Question4 from '../Question/Question4';
 import Question5 from '../Question/Question5';
+import ResultsPage from '../ResultsPage/ResultsPage';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const [nickname, setNickname] = useState('');
   const [selection, setSelection] = useState('');
   const [question, setQuestion] = useState(1);
+  const [userNumber, setUserNumber] = useState('');
   
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
@@ -31,7 +33,10 @@ const response = await fetch ("http://localhost:3000/api/players",{
   body: JSON.stringify(nameobject)
     }
   )
-  // console.log (response)
+  let unpackedJson = await response.json()
+  let userId = unpackedJson.payload[0]["player_id"]
+  setUserNumber(userId)
+  console.log(userId)
   // return response.json()
 }
 
@@ -70,8 +75,6 @@ const response = await fetch ("http://localhost:3000/api/players",{
     <div className="App">
       <NicknameInput userNickname={nickname} handleNickname={handleNickname}/>
     </div>
-
-    ///////////////////////////////////////////////////////
   );
   }
   else if (nickname.length !== 0 && selection.length === 0) {
@@ -105,6 +108,11 @@ const response = await fetch ("http://localhost:3000/api/players",{
   else if (question === 5) {
     return (
       <Question5 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
+    )
+  }
+  else if (question === 6) {
+    return (
+    <ResultsPage userNickname={nickname} userNumber={userNumber}/>
     )
   }
 }
