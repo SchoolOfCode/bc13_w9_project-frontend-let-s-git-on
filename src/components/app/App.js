@@ -19,13 +19,40 @@ function App() {
   //create a new state here for the questions 
   //Create five different objects with the questions and options
 
-  
+  async function sendName(name) {
+    let nameobject = {nickname: name}
+
+const response = await fetch ("http://localhost:3000/api/players",{
+  method: 'POST', 
+  headers: {
+    'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(nameobject)
+    }
+  )
+  // console.log (response)
+  // return response.json()
+}
+
+  // async function getPlayers() {
+
+  //   const response = await fetch("http://localhost:3000/api/players"
+  //   )
+  //   const data = await response.json();
+  // setData (data.payload[3].nickname)
+  // console.log (gotdata)
+
+
   // function for when you click on next after typing in a nickname
+  // ADDITIONAL - it sends the nickname to the API for now
   function handleNickname() {
     let value = document.getElementById("nicknameInput").value
     //post nickname to localhost backend needed here
     //updates state underneath - we need this even when the localhost request is working as the state controls what is rendered in the app
     setNickname(value);
+    sendName(value)
+
   }
 
   // function for when you click on ice melting hour
@@ -51,6 +78,8 @@ function App() {
     <div className="App">
       <NicknameInput userNickname={nickname} handleNickname={handleNickname}/>
     </div>
+
+    ///////////////////////////////////////////////////////
   );
   }
   else if (nickname.length !== 0 && selection.length === 0) {
