@@ -8,7 +8,6 @@
     height: 100vh;
     width: 100%;
     margin: 0;
-
     cursor: pointer;       
 }
 
@@ -49,21 +48,120 @@
     background-color: #ff00d9;
 
 }
-.SecondThreeBtn:hover .SecondThreeBtn:active, .SecondThreeBtn:focus{
+.SecondThreeBtn:hover, .SecondThreeBtn:active, .SecondThreeBtn:focus{
     background-color: #ff00d9;
+
+}
+
+.Q2{
+    text-align: center;
+    margin:0;
+    padding: 200px 240px 50px 330px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px ;
+    color: greenyellow ;      
+}
+
+
+.Q2firstThreeBtn{
+    padding: 10px 10px 10px 5px;
+    text-align: left;
+    display: block;
+    width: 230px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    right:90px;
+    border: 2.5px greenyellow solid;
+    color: white;
+    background-color: black;
+    
+
+}
+
+.Q2SecondThreeBtn{
+    padding: 10px 10px 10px 5px;
+    text-align: left;
+    display: block;
+    width: 230px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    left:170px;
+    bottom: 155px;
+    border: 2.5px greenyellow solid;
+    color: white;
+    background-color: black;
+
 
 }
 
 .nextBtn{
     background-color: black;
     font-family: 'Russo One', sans-serif;
-    color:white;
+    color:grey;
     position: absolute;
     right: 110px;
     bottom: 60px;
-    font-size: 20px;
+    font-size: 30px;
     font-family: 'Bebas Neue', cursive;
-    border: 2px white solid;
+    /* border: 2px white solid; */
     padding: 10px 30px 10px 30px;
     
 }
+
+.nextBtn:hover{
+    font-size: 40px;
+    color: white;
+}
+
+.Q2firstThreeBtn:hover, .Q2firstThreeBtn:active, .Q2firstThreeBtn:focus{
+    background-color: greenyellow ;
+    color: black;
+}
+
+.Q2SecondThreeBtn:hover, .Q2SecondThreeBtn:active, .Q2SecondThreeBtn:focus{
+    background-color: greenyellow ;
+    color: black;
+}
+
+.Q3{
+    text-align: center;
+    margin:0;
+    padding: 200px 250px 50px 330px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px ;
+    color: blueviolet;  
+}
+
+.Q3firstThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    right:90px;
+    border: 2.5px blueviolet solid;
+    color: white;
+    background-color: black;
+    
+}
+.Q3SecondThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    left:170px;
+    bottom: 155px;
+    border: 2.5px blueviolet solid;
+    color: white;
+    background-color:black;
+}
+.Q3firstThreeBtn:hover, .Q3firstThreeBtn:active, .Q3firstThreeBtn:focus{
+    background-color: blueviolet;
+
+}
+.Q3SecondThreeBtn:hover, .Q3SecondThreeBtn:active, .Q3SecondThreeBtn:focus{
+    background-color: blueviolet;
+
+}
+
