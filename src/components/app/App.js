@@ -2,12 +2,18 @@ import './App.css';
 import {useState} from 'react';
 import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
+//Import question function from '../Question/Question.js'
 
 
 function App() {
   // all the states we are using so far
   const [nickname, setNickname] = useState('');
   const [selection, setSelection] = useState('')
+  
+  //pass in props and create a question tag with the text e.g <question text="question here?"/>
+  //create a new state here for the questions 
+  //Create five different objects with the questions and options
+
   
   // function for when you click on next after typing in a nickname
   function handleNickname() {
