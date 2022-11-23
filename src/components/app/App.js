@@ -35,14 +35,6 @@ const response = await fetch ("http://localhost:3000/api/players",{
   // return response.json()
 }
 
-  // async function getPlayers() {
-
-  //   const response = await fetch("http://localhost:3000/api/players"
-  //   )
-  //   const data = await response.json();
-  // setData (data.payload[3].nickname)
-  // console.log (gotdata)
-
 
   // function for when you click on next after typing in a nickname
   // ADDITIONAL - it sends the nickname to the API for now
@@ -69,7 +61,7 @@ const response = await fetch ("http://localhost:3000/api/players",{
   function handleAnswer(e) {
     let answer = e.target.id;
     let questionID = e.target.parentNode.id;
-    return console.log(`answer: ${answer} question: ${questionID}`)
+    return console.log(`question: ${questionID} answer: ${answer}`)
   }
 
   //conditional rendering below to control what is displayed on the page based on states
