@@ -7,3 +7,18 @@
 //Main person component will be rendered here with the main person's answers state dropped in as props and the nickname state from APP dropped in as props
 // SecondPerson component will be rendered here with the list of other players state passed in, and then with a function passed into it that is written within Results which will mean when a player is selected from Second People's drop down list a GET request for their answers and nickname is sent, the result of the get request will also need to be passed in as props
 // Matches component will be rendered here with the data from both people's answers and some kind of function to get a match percentage
+
+import React from "react";
+import MainPerson from "../MainPerson/MainPerson";
+
+
+export default function ResultsPage({userNickname, userNumber}) {
+    //user name input page - this will be the first page to display in our app
+ return (
+    <div>
+        <MainPerson userNickname={userNickname} userNumber={userNumber}/>
+        <p>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</p>
+        
+    </div>
+ )
+}

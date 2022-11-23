@@ -7,6 +7,7 @@ import Question2 from '../Question/Question2';
 import Question3 from '../Question/Question3';
 import Question4 from '../Question/Question4';
 import Question5 from '../Question/Question5';
+import ResultsPage from '../ResultsPage/ResultsPage';
 
 
 
@@ -16,20 +17,47 @@ function App() {
   const [nickname, setNickname] = useState('');
   const [selection, setSelection] = useState('');
   const [question, setQuestion] = useState(1);
+  const [userNumber, setUserNumber] = useState('');
   
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
   //Create five different objects with the questions and options
 
+//<<<<<<< HEAD
   
 
   
+//=======
+  async function sendName(name) {
+    let nameobject = {nickname: name}
+
+const response = await fetch ("http://localhost:3000/api/players",{
+  method: 'POST', 
+  headers: {
+    'Accept': 'application/json',
+  'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(nameobject)
+    }
+  )
+  let unpackedJson = await response.json()
+  let userId = unpackedJson.payload[0]["player_id"]
+  setUserNumber(userId)
+  console.log(userId)
+  // return response.json()
+}
+
+
+//>>>>>>> 50ada8d26ecb31732a178cbd889548e05d616e87
   // function for when you click on next after typing in a nickname
+  // ADDITIONAL - it sends the nickname to the API for now
   function handleNickname() {
     let value = document.getElementById("nicknameInput").value
     //post nickname to localhost backend needed here
     //updates state underneath - we need this even when the localhost request is working as the state controls what is rendered in the app
     setNickname(value);
+    sendName(value)
+
   }
 
   // function for when you click on ice melting hour
@@ -46,7 +74,7 @@ function App() {
   function handleAnswer(e) {
     let answer = e.target.id;
     let questionID = e.target.parentNode.id;
-    return console.log(`answer: ${answer} question: ${questionID}`)
+    return console.log(`question: ${questionID} answer: ${answer}`)
   }
 
   //conditional rendering below to control what is displayed on the page based on states
@@ -88,6 +116,11 @@ function App() {
   else if (question === 5) {
     return (
       <Question5 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
+    )
+  }
+  else if (question === 6) {
+    return (
+    <ResultsPage userNickname={nickname} userNumber={userNumber}/>
     )
   }
 }
