@@ -19,13 +19,17 @@ function App() {
   //create a new state here for the questions 
   //Create five different objects with the questions and options
 
-  
+  async function sendName(name) {
+
+  }
   // function for when you click on next after typing in a nickname
+  // ADDITIONAL - it sends the nickname to the API for now
   function handleNickname() {
     let value = document.getElementById("nicknameInput").value
     //post nickname to localhost backend needed here
     //updates state underneath - we need this even when the localhost request is working as the state controls what is rendered in the app
     setNickname(value);
+
   }
 
   // function for when you click on ice melting hour
@@ -51,6 +55,8 @@ function App() {
     <div className="App">
       <NicknameInput userNickname={nickname} handleNickname={handleNickname}/>
     </div>
+
+    ///////////////////////////////////////////////////////
   );
   }
   else if (nickname.length !== 0 && selection.length === 0) {
