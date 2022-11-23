@@ -1,10 +1,60 @@
-/* .longerQ{}
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Russo+One&display=swap');
 
-.optionBtn{}
 
-.nextBtn{}
+.question{
+    text-align: center;
+    background: black;
+    /* background-image: linear-gradient(#B5179E,#7209B7, #560BAD); */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
 
-.btn {
+    cursor: pointer;       
+}
+
+.longerQ{
+    text-align: center;
+    margin:0;
+    padding: 200px 330px 50px 330px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 30px ;
+    color: #ff00d9;;
+}
+
+.firstThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    right:90px;
+    border: 2.5px #ff00d9 solid;
+    color: white;
+    background-color: black;
+    
+}
+.SecondThreeBtn{
+    padding: 10px 200px 10px 5px;
+    display: block;
+    width: 190px;
+    margin: 10px auto 0px auto;
+    position: relative;
+    left:170px;
+    bottom: 155px;
+    border: 2.5px #ff00d9 solid;
+    color: white;
+    background-color:black;
+}
+.firstThreeBtn:hover, .firstThreeBtn:active, .firstThreeBtn:focus{
+    background-color: #ff00d9;
+
+}
+.SecondThreeBtn:hover .SecondThreeBtn:active, .SecondThreeBtn:focus{
+    background-color: #ff00d9;
+
+}
+
+.nextBtn{
     background-color: black;
     font-family: 'Russo One', sans-serif;
     color:white;
@@ -12,13 +62,8 @@
     right: 110px;
     bottom: 60px;
     font-size: 20px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-      
-      color: greenyellow;
-      font-size:30px;
-  }
-       */
+    font-family: 'Bebas Neue', cursive;
+    border: 2px white solid;
+    padding: 10px 30px 10px 30px;
     
+}
