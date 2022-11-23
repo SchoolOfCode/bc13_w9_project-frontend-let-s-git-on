@@ -2,13 +2,14 @@ import './App.css';
 import {useState} from 'react';
 import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
-//Import question function from '../Question/Question.js'
+import Question1 from '../Question/Question1';
 
 
 function App() {
   // all the states we are using so far
   const [nickname, setNickname] = useState('');
-  const [selection, setSelection] = useState('')
+  const [selection, setSelection] = useState('');
+  const [question, setQuestion] = useState(0);
   
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
@@ -29,6 +30,10 @@ function App() {
     setSelection('ice-melter');
   }
 
+  function handleNextQuestion() {
+    setQuestion(question + 1);
+  }
+
   //conditional rendering below to control what is displayed on the page based on states
   if (nickname.length === 0) {
   return (
@@ -47,8 +52,11 @@ function App() {
   }
   else if (nickname.length !== 0 && selection.length !== 0) {
     return (
-    <p>{selection} questions will soon be displayed here when we have coded it {nickname}</p>
+      <Question1 handleNextQuestion={handleNextQuestion}/>
     )
+  }
+  else {
+    return <p>oh no</p>
   }
 }
 
