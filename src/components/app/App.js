@@ -29,28 +29,22 @@ function App() {
   //create a new state here for the questions 
   //Create five different objects with the questions and options
 
-  const [gotdata, setData] = useState('');
+  const [gotdata, setData] = useState('Username');
 // testing out state functionality interacting with fetched API data
 
 
-useEffect(() => {
-  //Runs only on the first render
   async function getPlayers() {
 
     const response = await fetch("http://localhost:3000/api/players"
     )
     const data = await response.json();
-  setData (data)
+  setData (data.payload[3].nickname)
   console.log (gotdata)
-    } 
-    getPlayers()
 
-}, []);
-
-
-
-
-
+  }
+useEffect(() => {
+getPlayers()
+    }, [] );
   
   // function for when you click on next after typing in a nickname
   function handleNickname() {
@@ -81,7 +75,8 @@ useEffect(() => {
   if (nickname.length === 0) {
   return (
     <div className="App">
-      <NicknameInput userNickname={nickname} handleNickname={handleNickname} testProp={''}/>
+    <button onClick ={()=> {getPlayers()}}>BUTTON</button>
+      <NicknameInput userNickname={nickname} handleNickname={handleNickname} testProp={gotdata}/>
     </div>
   );
   }
