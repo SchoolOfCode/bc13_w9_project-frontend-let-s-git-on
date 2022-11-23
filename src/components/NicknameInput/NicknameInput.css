@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap');
+
+.btn {
+  background-color: black;
+  font-family: 'Russo One', sans-serif;
+  color:white;
+  position: absolute;
+  right: 110px;
+  bottom: 60px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+    
+    color: greenyellow;
+    font-size:30px;
+    
+  }
+
+.user-input{
+    
+    font-family: 'Russo One', sans-serif;
+    font-size: 40px ;
+    background: -webkit-linear-gradient(rgb(194, 194, 255), rgb(213, 46, 251));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#nicknameInput{
+  border-radius: 25px;
+  padding: 20px; 
+  width: 300px;
+  height: 0.5px; 
+}

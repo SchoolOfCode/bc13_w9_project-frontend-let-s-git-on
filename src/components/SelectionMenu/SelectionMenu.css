@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap');
+
+#Selection{
+    text-align: center;
+    background-color: black;
+    /* background-image: linear-gradient(#B5179E,#7209B7, #560BAD); */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#welcome{
+    
+    text-align: center;
+    margin:0;
+    padding-top: 120px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 60px ;
+    background: -webkit-linear-gradient(rgb(194, 194, 255), rgb(213, 46, 251));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
+#welcome:hover{
+    animation: scrolling 15s linear infinite;
+}
+@keyframes scrolling{
+    0% {
+        transform: translateX(100%);
+    }
+    0%{
+        transform: translateX(-100%);
+    }
+}
+
+
+#pick-your-poision{
+    color: blueviolet;
+    padding-bottom: 75px ;
+}
+
+#energiser {
+    padding: 55px;
+    margin-right: 70px ;
+    border-radius: 80px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: black;
+    background-color: #9900ff;
+   
+
+}
+
+#ice-melter {
+    padding: 55px;
+    margin-right: 70px ;
+    border-radius: 80px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: black;
+    background-color: #ff00d9;
+
+}
+
+#voting {
+    padding: 55px;
+    margin-right: 70px ;
+    border-radius: 80px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    color: black;
+    background-color: rgb(0, 132, 255);
+    
+
+}  
+
+#energiser:hover, #ice-melter:hover, #voting:hover {
+    
+    color: white;
+    background-color: black;
+    border: 2px white solid;   
+  }
+
+/* #energiser:hover{
+    
+    color: #9900ff;
+    background-color: black;
+    border: 2px white solid;   
+  }
+
+#ice-melter:hover{
+    
+    color: #ff00d9;
+    background-color: black;
+    border: 2px white solid;
+  }
+
+#voting:hover {
+    
+    color: rgb(0, 132, 255);
+    background-color: black;
+    border: 2px white solid;  
+  } */
