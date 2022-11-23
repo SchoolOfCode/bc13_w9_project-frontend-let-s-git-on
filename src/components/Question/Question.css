@@ -1,0 +1,24 @@
+/* .longerQ{}
+
+.optionBtn{}
+
+.nextBtn{}
+
+.btn {
+    background-color: black;
+    font-family: 'Russo One', sans-serif;
+    color:white;
+    position: absolute;
+    right: 110px;
+    bottom: 60px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+      
+      color: greenyellow;
+      font-size:30px;
+  }
+       */
+    
