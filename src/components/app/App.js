@@ -35,7 +35,14 @@ function App() {
   }
 
   function handleNextQuestion() {
-    setQuestion(question + 1);
+    return setQuestion(question + 1);
+    //return console.log(question)
+  }
+
+  function handleAnswer(e) {
+    let answer = e.target.id;
+    let questionID = e.target.parentNode.id;
+    return console.log(`answer: ${answer} question: ${questionID}`)
   }
 
   //conditional rendering below to control what is displayed on the page based on states
@@ -54,29 +61,29 @@ function App() {
       </div>
     )
   }
-  else if (nickname.length !== 0 && selection.length !== 0) {
+  else if (nickname.length !== 0 && selection.length !== 0 && question === 1) {
     return (
-      <Question1 handleNextQuestion={handleNextQuestion}/>
+      <Question1 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
     )
   }
   else if (question === 2) {
     return (
-      <Question2 handleNextQuestion={handleNextQuestion}/>
+      <Question2 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
     )
   }
   else if (question === 3) {
     return (
-      <Question3 handleNextQuestion={handleNextQuestion}/>
+      <Question3 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
     )
   }
   else if (question === 4) {
     return (
-      <Question4 handleNextQuestion={handleNextQuestion}/>
+      <Question4 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
     )
   }
   else if (question === 5) {
     return (
-      <Question5 handleNextQuestion={handleNextQuestion}/>
+      <Question5 handleAnswer={handleAnswer} handleNextQuestion={handleNextQuestion}/>
     )
   }
 }
