@@ -3,13 +3,17 @@ import {useState} from 'react';
 import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
 import Question1 from '../Question/Question1';
+import Question2 from '../Question/Question2';
+import Question3 from '../Question/Question3';
+import Question4 from '../Question/Question4';
+import Question5 from '../Question/Question5';
 
 
 function App() {
   // all the states we are using so far
   const [nickname, setNickname] = useState('');
   const [selection, setSelection] = useState('');
-  const [question, setQuestion] = useState(0);
+  const [question, setQuestion] = useState(1);
   
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
@@ -55,8 +59,25 @@ function App() {
       <Question1 handleNextQuestion={handleNextQuestion}/>
     )
   }
-  else {
-    return <p>oh no</p>
+  else if (question === 2) {
+    return (
+      <Question2 handleNextQuestion={handleNextQuestion}/>
+    )
+  }
+  else if (question === 3) {
+    return (
+      <Question3 handleNextQuestion={handleNextQuestion}/>
+    )
+  }
+  else if (question === 4) {
+    return (
+      <Question4 handleNextQuestion={handleNextQuestion}/>
+    )
+  }
+  else if (question === 5) {
+    return (
+      <Question5 handleNextQuestion={handleNextQuestion}/>
+    )
   }
 }
 
