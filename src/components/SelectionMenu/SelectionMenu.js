@@ -2,8 +2,8 @@ import React from "react";
 import './SelectionMenu.css';
 
 export default function SelectionMenu({nickname, handleSelection}) {
-// renders the choice of game
 
+    // renders the game choosing menu
     return (
         <div id="Selection">
             <h1 id="welcome">Welcome {nickname}😸 !</h1>
