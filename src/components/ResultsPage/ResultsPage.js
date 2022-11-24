@@ -18,27 +18,28 @@ import MainPerson from "../MainPerson/MainPerson";
 
 
 export default function ResultsPage({userNickname, userNumber}) {
-    const [userState, setUserState] = useState(getStats())
+    const [userState, setUserState] = useState('')
 
-     async function getStats (id) {
+
+console.log (userState)
+useEffect(() => {
+    // Run! Like go get some data from an API.
+    async function getStats () {
         const response = await fetch (`http://localhost:3000/api/players/${userNumber}`)
         let unpackedJson = await response.json()
         console.log ('PLAYERS STATS:', unpackedJson.payload)
-        // setUserState(unpackedJson.payload)
-        // console.log ('userState:', userState)
-        return unpackedJson.payload
+
+        setUserState (unpackedJson.payload)
         }
-console.log (userState)
-// useEffect(() => {
-//     // Run! Like go get some data from an API.
-//     setUserState(getStats())
-//     console.log ('USERSTATE', userState)
-//   }, []);
+        getStats()
+    console.log ('USERSTATE', userState)
+  },[] );
+  
 
     //user name input page - this will be the first page to display in our app
  return (
     <div>
-    <div>{userState[0]}</div>
+    <div>Hello{userState.userNickname}</div>
         <MainPerson userNickname={userNickname} userNumber={userNumber}/>
         <p>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</p>
         
