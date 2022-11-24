@@ -1,5 +1,6 @@
 import React from "react";
 import './Question4.css';
+import images from '../../images/red.png';
 
 export default function Question4({handleAnswer, handleNextQuestion}) {
     return (
@@ -14,6 +15,11 @@ export default function Question4({handleAnswer, handleNextQuestion}) {
         <button onClick={handleAnswer} id='24' className="Q4SecondThreeBtn">Shape shifter but you only turn into bugs</button>
 
         <button onClick={handleNextQuestion} className="nextBtn">next</button>
+        <img src= {images} className='red'alt='redSmile'/>
+        <img src= {images} className='red2'alt='redSmile'/>
         </div>
     )
 }
+
+
+
