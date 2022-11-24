@@ -10,6 +10,7 @@
 import {useState, useEffect} from "react"
 import React from "react";
 //import MainPerson from "../MainPerson/MainPerson";
+import DisplayCard from "../DisplayCard/DisplayCard.js"
 
 
 
@@ -49,16 +50,14 @@ sendP2(value)
  return (
     <div id="resultsPage">
         <div id="playerOne">
-            <h1>Hello {userNickname}</h1>
-            <h2> Your ID is: {userNumber}</h2>
-            <ol>
+        <DisplayCard userState = {userState} userNickname = {userNickname} userNumber = {userNumber}/>
+            {/* <ol>
                 <li>{userState[0].question}<strong> {userState[0].choices}</strong></li>
                 <li>{userState[1].question}<strong> {userState[1].choices}</strong></li>
                 <li>{userState[2].question}<strong> {userState[2].choices}</strong></li>
                 <li>{userState[3].question}<strong> {userState[3].choices}</strong></li>
                 <li>{userState[4].question}<strong> {userState[4].choices}</strong></li>
-            </ol>
-            <p>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</p>
+            </ol> */}
         </div>
         <div id="player 2">
             <h3>player 2 here
