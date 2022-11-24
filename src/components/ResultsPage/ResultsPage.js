@@ -18,7 +18,8 @@ import MainPerson from "../MainPerson/MainPerson";
 
 
 export default function ResultsPage({userNickname, userNumber}) {
-    const [userState, setUserState] = useState('')
+    const [userState, setUserState] = useState([{}
+    ])
 
 
 console.log (userState)
@@ -30,16 +31,17 @@ useEffect(() => {
         console.log ('PLAYERS STATS:', unpackedJson.payload)
 
         setUserState (unpackedJson.payload)
+        console.log("Payload", unpackedJson.payload[0].choices)
         }
         getStats()
-    console.log ('USERSTATE', userState)
+    console.log ('USERSTATE', userState[0].choices)
   },[] );
-  
+
 
     //user name input page - this will be the first page to display in our app
  return (
     <div>
-    <div>Hello{userState.userNickname}</div>
+    <div>Hello{userState[0].choices}</div>
         <MainPerson userNickname={userNickname} userNumber={userNumber}/>
         <p>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</p>
         
