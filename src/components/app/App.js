@@ -34,8 +34,8 @@ function App() {
 const response = await fetch ("http://localhost:3000/api/players",{
   method: 'POST', 
   headers: {
-    'Accept': 'application/json',
-  'Content-Type': 'application/json',
+    'Accept':       'application/json',
+    'Content-Type': 'application/json',
   },
   body: JSON.stringify(nameobject)
     }
@@ -46,6 +46,26 @@ const response = await fetch ("http://localhost:3000/api/players",{
   console.log(userId)
   // return response.json()
 }
+
+//========================
+
+async function sendAnswer(userNum, qID, answer) {
+  let answerobject = {
+    playerID: userNum,
+    question: qID,
+    answer: answer 
+  }
+  
+  const response = await fetch ("http://localhost:3000/api/answers", {
+    method: 'POST',
+    headers: {
+      'Accept':       'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(answerobject)
+    }
+  )
+  }  
 
 
 //>>>>>>> 50ada8d26ecb31732a178cbd889548e05d616e87
@@ -74,6 +94,8 @@ const response = await fetch ("http://localhost:3000/api/players",{
   function handleAnswer(e) {
     let answer = e.target.id;
     let questionID = e.target.parentNode.id;
+    sendAnswer(userNumber, questionID, answer)
+
     return console.log(`question: ${questionID} answer: ${answer}`)
   }
 
