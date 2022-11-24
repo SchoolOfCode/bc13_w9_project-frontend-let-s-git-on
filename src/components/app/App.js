@@ -22,8 +22,6 @@ function App() {
   const [answer, setAnswer]= useState('')
   //these are in a good state
 
-  const [partnerState, setPartnerState] = useState('')
-
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
   //Create five different objects with the questions and options

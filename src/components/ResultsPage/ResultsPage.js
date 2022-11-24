@@ -15,6 +15,7 @@ import React from "react";
 
 export default function ResultsPage({userNickname, userNumber}) {
     const [userState, setUserState] = useState([{},{},{},{},{}])
+    const [p2State, setP2State] = useState([{},{},{},{},{}])
 
 
 console.log (userState)
@@ -23,14 +24,25 @@ useEffect(() => {
     async function getStats () {
         const response = await fetch (`http://localhost:3000/api/players/${userNumber}`)
         let unpackedJson = await response.json()
-        console.log ('PLAYERS STATS:', unpackedJson.payload)
-
         setUserState (unpackedJson.payload)
-        console.log("Payload", unpackedJson.payload[0].choices)
         }
         getStats()
-    console.log ('USERSTATE', userState[0].choices)
   },[] );
+
+  useEffect( () => {})
+
+  async function sendP2(value) {
+    const response = await fetch (`http://localhost:3000/api/players/${value}`)
+let unpackedJson = await response.json()
+    console.log (unpackedJson.payload)
+    setP2State(unpackedJson.payload)
+  }
+
+  function handleP2(){
+    let value = document.getElementById('p2Input').value
+sendP2(value)
+    } 
+  
 
 
     //user name input page - this will be the first page to display in our app
@@ -49,7 +61,9 @@ useEffect(() => {
             <p>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</p>
         </div>
         <div id="player 2">
-            <h3>player 2 here</h3>
+            <h3>player 2 here
+            <input id='p2Input'></input> <button onClick ={()=>{handleP2()}}>Compare results</button></h3>
+            <div>{ p2State[0].question} {p2State[0].choices}</div>
 
 
         </div>
