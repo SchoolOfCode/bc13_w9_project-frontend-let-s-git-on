@@ -8,7 +8,7 @@ import images4 from '../../images/wolf.png';
 export default function Question1({handleNextQuestion, handleAnswer}) {
     return (
         <div id='1' className="question">
-        <h2 className="longerQ">Imagine you are in a jungle and you have to choose one of these animals to fight to get to freedom which one?</h2>
+        <h2 className="longerQ">Imagine you are in a jungle and you have to fight one of these animals to get to freedom, which one do you choose?</h2>
 
         <button onClick={handleAnswer} id='1' className="firstThreeBtn">Gorilla</button>
         <button onClick={handleAnswer} id='2' className="firstThreeBtn">Bear</button>

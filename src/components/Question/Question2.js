@@ -7,7 +7,7 @@ import images from '../../images/smile green.png';
 export default function Question2({handleAnswer, handleNextQuestion}) {
     return (
         <div id='2'className="question">
-        <h2 className="Q2">Which would you consider so overrated ?</h2>
+        <h2 className="Q2">Which do you think is most overrated ?</h2>
     
         <button onClick={handleAnswer} id='7' className="Q2firstThreeBtn">Social Media</button>
         <button onClick={handleAnswer} id='8' className="Q2firstThreeBtn">Dogs and Cats</button>

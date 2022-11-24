@@ -64,10 +64,9 @@ useEffect(() => {
         <h2 className="yourIdIs"> Your ID is: {userNumber}</h2>
         <img src= {images} className='neonS'alt='neonS'/>
             <DisplayCard  userState = {userState} userNickname = {userNickname}/>
-            <p><i className="personalId">Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
         </div>
         <div id="playerTwo">
-            <h3 className="player2Results">Write the ID of another player here to see their results:</h3>
+            <h3 className="player2Results">{p2State[0].nickname}</h3>
             <img src= {images2} className='shymonkey'alt='monkey'/>
             <div>
             <DisplayCard id="displayBox2" userState = {p2State} userNickname = {p2State[0].nickname}/>
