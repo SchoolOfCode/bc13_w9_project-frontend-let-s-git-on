@@ -14,8 +14,7 @@ import React from "react";
 
 
 export default function ResultsPage({userNickname, userNumber}) {
-    const [userState, setUserState] = useState([{}
-    ])
+    const [userState, setUserState] = useState([{},{},{},{},{}])
 
 
 console.log (userState)
