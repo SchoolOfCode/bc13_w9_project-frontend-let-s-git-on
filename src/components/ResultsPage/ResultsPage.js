@@ -48,21 +48,21 @@ sendP2(value)
 
     //user name input page - this will be the first page to display in our app
  return (
-    <div id="resultsPage">
+        <div id="resultsPage">
         <div id="playerOne">
-        <DisplayCard userState = {userState} userNickname = {userNickname} userNumber = {userNumber}/>
-            {/* <ol>
-                <li>{userState[0].question}<strong> {userState[0].choices}</strong></li>
-                <li>{userState[1].question}<strong> {userState[1].choices}</strong></li>
-                <li>{userState[2].question}<strong> {userState[2].choices}</strong></li>
-                <li>{userState[3].question}<strong> {userState[3].choices}</strong></li>
-                <li>{userState[4].question}<strong> {userState[4].choices}</strong></li>
-            </ol> */}
+        <h1>Hello {userNickname}</h1>
+        <h2> Your ID is: {userNumber}</h2>
+            <DisplayCard userState = {userState} userNickname = {userNickname}/>
+            <p><i>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
         </div>
+
         <div id="player 2">
-            <h3>player 2 here
+            <h3>Write the ID of another player here to see their results:
             <input id='p2Input'></input> <button onClick ={()=>{handleP2()}}>Compare results</button></h3>
-            <div>{ p2State[0].question} {p2State[0].choices}</div>
+            <div>
+            <DisplayCard userState = {p2State} userNickname = {p2State[0].nickname}/>
+               
+                </div>
 
 
         </div>
