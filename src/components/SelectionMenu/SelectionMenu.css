@@ -22,19 +22,18 @@
     background: -webkit-linear-gradient(rgb(194, 194, 255), rgb(213, 46, 251));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transform-origin: top center;
+	animation: swing 2s linear;
+}
+@keyframes swing {
+	20% { transform: rotate(15deg); }	
+	40% { transform: rotate(-10deg); }
+	60% { transform: rotate(5deg); }	
+	80% { transform: rotate(-5deg); }	
+	100% { transform: rotate(0deg); }
+}
     
-}
-#welcome:hover{
-    animation: scrolling 15s linear infinite;
-}
-@keyframes scrolling{
-    0% {
-        transform: translateX(100%);
-    }
-    0%{
-        transform: translateX(-100%);
-    }
-}
+
 
 
 #pick-your-poision{
@@ -89,25 +88,6 @@
           40% {transform: translateY(-30px);}
           60% {transform: translateY(-15px);}
       }  
- 
 
-/* #energiser:hover{
     
-    color: #9900ff;
-    background-color: black;
-    border: 2px white solid;   
-  }
 
-#ice-melter:hover{
-    
-    color: #ff00d9;
-    background-color: black;
-    border: 2px white solid;
-  }
-
-#voting:hover {
-    
-    color: rgb(0, 132, 255);
-    background-color: black;
-    border: 2px white solid;  
-  } */
