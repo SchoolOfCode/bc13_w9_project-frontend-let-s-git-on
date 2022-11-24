@@ -18,6 +18,8 @@ function App() {
   const [selection, setSelection] = useState('');
   const [question, setQuestion] = useState(1);
   const [userNumber, setUserNumber] = useState('');
+  const [questionID, setQuestionID]= useState('')
+  const [answer, setAnswer]= useState('')
   
   //pass in props and create a question tag with the text e.g <question text="question here?"/>
   //create a new state here for the questions 
@@ -55,7 +57,6 @@ async function sendAnswer(userNum, qID, answer) {
     question: qID,
     answer: answer 
   }
-  
   const response = await fetch ("http://localhost:3000/api/answers", {
     method: 'POST',
     headers: {
@@ -66,7 +67,6 @@ async function sendAnswer(userNum, qID, answer) {
     }
   )
   }  
-
 
 //>>>>>>> 50ada8d26ecb31732a178cbd889548e05d616e87
   // function for when you click on next after typing in a nickname
@@ -87,17 +87,19 @@ async function sendAnswer(userNum, qID, answer) {
   }
 
   function handleNextQuestion() {
+    sendAnswer(userNumber, questionID, answer)
     return setQuestion(question + 1);
     //return console.log(question)
   }
 
   function handleAnswer(e) {
-    let answer = e.target.id;
-    let questionID = e.target.parentNode.id;
-    sendAnswer(userNumber, questionID, answer)
+    setAnswer(e.target.id)
+    setQuestionID(e.target.parentNode.id)
 
     return console.log(`question: ${questionID} answer: ${answer}`)
   }
+
+
 
   //conditional rendering below to control what is displayed on the page based on states
   if (nickname.length === 0) {
