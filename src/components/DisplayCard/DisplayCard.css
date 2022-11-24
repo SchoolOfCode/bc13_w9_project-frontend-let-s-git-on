@@ -1,6 +1,10 @@
 .displayCard{
-    background-color: rgb(240, 239, 239);
-    border-style: solid;
-    border-color: rgb(78, 38, 5);
-    padding:40px 
+    
+    padding-right: 40px; 
+    padding-left: 150px;
+    padding-bottom: 20px;
+    font-size: 15px;
+    color: white;
+    
 }
+

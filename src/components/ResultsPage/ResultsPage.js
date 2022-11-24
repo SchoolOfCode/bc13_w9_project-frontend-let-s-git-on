@@ -2,6 +2,10 @@ import {useState, useEffect} from "react"
 import React from "react";
 //import MainPerson from "../MainPerson/MainPerson";
 import DisplayCard from "../DisplayCard/DisplayCard.js"
+import './ResultsPage.css';
+import images2 from '../../images/monkeyshy.png';
+import images from '../../images/neon.png';
+
 
 
 export default function ResultsPage({userNickname, userNumber}) {
@@ -38,15 +42,17 @@ useEffect(() => {
         return (
         <div id="resultsPage">
         <div id="playerOne">
-        <h1>Hello {userNickname}</h1>
-        <h2> Your ID is: {userNumber}</h2>
-            <DisplayCard userState = {userState} userNickname = {userNickname}/>
-            <p><i>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
+        <h1 className="hello">Hello {userNickname}</h1>
+        <h2 className="yourIdIs"> Your ID is: {userNumber}</h2>
+        <img src= {images} className='neonS'alt='neonS'/>
+            <DisplayCard  userState = {userState} userNickname = {userNickname}/>
+            <p className="personalId"><i>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
+            
         </div>
-        <div id="player 2">
-            <h3>Write the ID of another player here to see their results:
-            <input type="number" id='p2Input'></input> <button onClick ={()=>{handleP2()}}>Compare results</button></h3>
-            <p></p>
+        <div id="playerTwo">
+            <h3 className="player2Results">Write the ID of another player here to see their results:
+            <input type="number" id='p2Input'></input> <button className="compareBtn" onClick ={()=>{handleP2()}}>Compare results</button></h3>
+            <p className="p"></p>
         </div>
         </div>
     )}
@@ -54,15 +60,17 @@ useEffect(() => {
         return (
         <div id="resultsPage">
         <div id="playerOne">
-        <h1>Hello {userNickname}</h1>
-        <h2> Your ID is: {userNumber}</h2>
-            <DisplayCard userState = {userState} userNickname = {userNickname}/>
-            <p><i>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
+        <h1 className="hello">Hello {userNickname}</h1>
+        <h2 className="yourIdIs"> Your ID is: {userNumber}</h2>
+        <img src= {images} className='neonS'alt='neonS'/>
+            <DisplayCard  userState = {userState} userNickname = {userNickname}/>
+            <p><i className="personalId">Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
         </div>
-        <div id="player 2">
-            <h3>Write the ID of another player here to see their results:</h3>
+        <div id="playerTwo">
+            <h3 className="player2Results">Write the ID of another player here to see their results:</h3>
+            <img src= {images2} className='shymonkey'alt='monkey'/>
             <div>
-            <DisplayCard userState = {p2State} userNickname = {p2State[0].nickname}/>
+            <DisplayCard id="displayBox2" userState = {p2State} userNickname = {p2State[0].nickname}/>
             </div>
         </div>
         </div>

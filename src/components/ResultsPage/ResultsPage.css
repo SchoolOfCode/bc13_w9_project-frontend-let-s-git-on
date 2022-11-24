@@ -1,0 +1,81 @@
+#resultsPage{
+    background: black;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 100px;
+    
+}
+
+
+#playerOne{
+    float: left;
+    padding-top: 20px;
+    width: 600px;
+    color: red;     
+}
+
+
+#playerTwo{
+  float: right;
+  right: 0px;
+  width: 600px;
+  padding-top: 90px;
+  padding-left: 200px;
+  color: red;
+    
+}
+
+.player2Results{
+  float: right;
+  right: 0px;
+  padding-right: 30px;
+  color: red;
+}
+
+.hello{
+    font-size: 60px ;
+    background: -webkit-linear-gradient(blue, rgb(213, 46, 251));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Russo One', sans-serif;
+    padding-top: 40px;
+    padding-left: 150px;
+}
+
+.yourIdIs{
+    color: white;
+    padding-left: 150px;
+    
+}
+
+
+
+.personalId{
+    color: red;
+}
+
+.compareBtn{
+    background-color: aqua;
+    color: red;
+    justify-content: center;
+    
+}
+
+.neonS{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    /* border: solid 2px white; */
+    justify-content: center;
+    
+}
+
+.shymonkey{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    /* border: solid 2px white; */
+    justify-content: center;
+    
+}

@@ -1,6 +1,9 @@
 import "./DisplayCard.css"
 import React from 'react'
 import ListItem from '../ListItem/ListItem.js'
+// import images from '../../images/monkey.png';
+
+
 
 export default function DisplayCard ({userNickname, userState}){
 return(
