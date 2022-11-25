@@ -46,13 +46,13 @@ useEffect(() => {
         <h2 className="yourIdIs"> Your ID is: {userNumber}</h2>
         <img src= {images} className='neonS'alt='neonS'/>
             <DisplayCard  userState = {userState} userNickname = {userNickname}/>
-            <p className="personalId"><i>Your personal ID is {userNumber}, anyone you play with will need to know this number to compare your results.</i></p>
+            <p className="personalId"></p>
             
         </div>
         <div id="playerTwo">
-            <h3 className="player2Results">Write the ID of another player here to see their results:
+            <h3 className="playerTwoResults">Write the ID of another player here to see their results:
             <input type="number" id='p2Input'></input> <button className="compareBtn" onClick ={()=>{handleP2()}}>Compare results</button></h3>
-            <p className="p"></p>
+            <p ></p>
         </div>
         </div>
     )}
