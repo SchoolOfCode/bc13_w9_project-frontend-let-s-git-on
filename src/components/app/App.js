@@ -151,7 +151,7 @@ function App() {
 		question === 1
 	) {
 		return (
-			<Question1
+			<QuestionCard
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>
