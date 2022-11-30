@@ -1,4 +1,5 @@
-describe('Lets see if this works',
+
+describe('Checking overall page functionality',
 ()=> {
 
 // beforeEach(() => {
@@ -12,6 +13,7 @@ it('shows the username prompt, and 😸', ()=>{
 
  cy.get('.user-input').should('have.text', `😸What's your username?`)
 })
+
 
 it ('lets us type into the input field and shows our name once the next button is clicked', ()=>{
 
@@ -40,6 +42,11 @@ cy.get(`#6`).should(`not.have.text`, "")
 
 it ('shows various spinning animals', ()=>{
 cy.get(`.bear-image`).should(`have.css`, `-webkit-animation`)
+
+})
+
+it ('select an option and go to the next question',()=>{
+cy.get('[data-cy="1"]').click()
 
 })
 
