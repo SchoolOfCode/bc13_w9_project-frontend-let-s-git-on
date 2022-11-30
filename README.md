@@ -127,5 +127,5 @@ cypress: open
 @aliafarhana88,
 @BenPuusta,
 @B2ella,
-@Suzi-Clark</i>
+@Suzi-Clark
 
