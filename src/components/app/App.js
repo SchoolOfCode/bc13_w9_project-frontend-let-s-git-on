@@ -2,6 +2,8 @@ import './App.css';
 import { useState } from 'react';
 import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
+
+import QuestionCard from '../Question/QuestionCard.js';
 import Question1 from '../Question/Question1';
 import Question2 from '../Question/Question2';
 import Question3 from '../Question/Question3';

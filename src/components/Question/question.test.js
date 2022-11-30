@@ -4,7 +4,7 @@ import { test, expect } from '@jest/globals';
 import userEvent from '@testing-library/user-event';
 
 //import the component to test
-import Question1 from './Question1.js';
+import QuestionCard from './QuestionCard.js';
 
 //test that one question is displayed with 6 answer buttons, and 1 next page button.
 
@@ -17,7 +17,7 @@ test('renders the question on page', () => {
 
 	//render the component and pass in props
 	render(
-		<Question1
+		<QuestionCard
 			handleNextQuestion={props.handleNextQuestion}
 			handleAnswer={props.handleAnswer}
 		/>
@@ -47,7 +47,7 @@ test('renders 7 buttons on page', () => {
 
 	//render the component and pass in props
 	render(
-		<Question1
+		<QuestionCard
 			handleNextQuestion={props.handleNextQuestion}
 			handleAnswer={props.handleAnswer}
 		/>
@@ -67,12 +67,13 @@ test('handleAnswer function is called when answer button is clicked', () => {
 
 	//Act
 	render(
-		<Question1
+		<QuestionCard
 			handleNextQuestion={props.handleNextQuestion}
 			handleAnswer={props.handleAnswer}
 		/>
 	);
-	const ansButton = screen.getByRole('button', { name: /anaconda/i }); //get a button
+	//const ansButton = screen.getByRole('button', { name: /anaconda/i }); //get a button
+	const ansButton = screen.getByText(/anaconda/i, { selector: 'button' });
 	userEvent.click(ansButton); //click on the button
 
 	//Assert
@@ -85,7 +86,7 @@ test('handleNextQuestion function is called when next button is clicked', () => 
 
 	//Act
 	render(
-		<Question1
+		<QuestionCard
 			handleNextQuestion={props.handleNextQuestion}
 			handleAnswer={props.handleAnswer}
 		/>
