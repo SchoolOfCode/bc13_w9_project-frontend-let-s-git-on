@@ -10,7 +10,7 @@ export default function Question1({handleNextQuestion, handleAnswer}) {
         <div id='1' className="question">
         <h2 className="longerQ">Imagine you are in a jungle and you have to choose one of these animals to fight to get to freedom which one?</h2>
 
-        <button onClick={handleAnswer} id='1' className="firstThreeBtn">Gorilla</button>
+        <button onClick={handleAnswer} data-cy="1" id='1' className="firstThreeBtn">Gorilla</button>
         <button onClick={handleAnswer} id='2' className="firstThreeBtn">Bear</button>
         <button onClick={handleAnswer} id='3' className="firstThreeBtn">Wolf</button>
         <button onClick={handleAnswer} id='4' className="SecondThreeBtn">Anaconda</button>
