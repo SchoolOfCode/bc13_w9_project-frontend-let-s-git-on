@@ -1,7 +1,8 @@
 import './App.css';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
+import getQandA from './appFetch';
 
 import QuestionCard from '../Question/QuestionCard.js';
 import Question1 from '../Question/Question1';
@@ -28,6 +29,12 @@ function App() {
 	const [questionID, setQuestionID] = useState('');
 	const [answer, setAnswer] = useState('');
 	//these are in a good state
+	const [qandA, setQandA] = useState([]);
+
+	// useEffect(()=>{
+	// 	getQandA()
+	// }, [])
+
 
 	//pass in props and create a question tag with the text e.g <question text="question here?"/>
 	//create a new state here for the questions
@@ -100,7 +107,9 @@ function App() {
 	 */
 	function handleSelection() {
 		//this state also controls what is rendered in the app, please don't remove
-		setSelection('ice-melter');
+		setSelection('ice-melter')
+		setQandA(getQandA())
+
 	}
 
 	/**
@@ -110,6 +119,7 @@ function App() {
 	 */
 	function handleNextQuestion() {
 		sendAnswer(userNumber, questionID, answer);
+		console.log(`State:`,qandA)
 		return setQuestion(question + 1);
 		//return console.log(question)
 	}

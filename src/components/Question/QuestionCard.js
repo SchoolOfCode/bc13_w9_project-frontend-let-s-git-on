@@ -16,7 +16,9 @@ import images4 from '../../images/wolf.png';
 //perhaps useEffect to render the page for each question
 //get question & answers from db (instead of hard coding)
 //fetch db stuff
-export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
+
+
+export default function QuestionCard({ handleNextQuestion, handleAnswer, qandA }) {
 	const ansArr = [
 		{
 			id: 1,
@@ -44,15 +46,15 @@ export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
 		},
 	];
 
-	const question = `Imagine you are in a jungle and you have to fight one of these animals
-    to get to freedom, which one do you choose?`;
+	// const question = `Imagine you are in a jungle and you have to fight one of these animals
+    // to get to freedom, which one do you choose?`;
 
 	const imgArrBear = ['bear-image', 'bear-image2', 'bear-image3'];
 	const imgArrEle = ['elephant', 'elephant2'];
 
 	return (
 		<div id="1" className="question">
-			<h2 className="longerQ">{question}</h2>
+			<h2 className="longerQ">{qandA[0]?.question}</h2>
 			<AnsButtonDisplay
 				handleAnswer={handleAnswer}
 				ansArr={ansArr.slice(0, 3)}
