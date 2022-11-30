@@ -15,7 +15,7 @@ import images4 from '../../images/wolf.png';
 //each  question has its own image import?
 //perhaps useEffect to render the page for each question
 //get question & answers from db (instead of hard coding)
-
+//fetch db stuff
 export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
 	const ansArr = [
 		{
