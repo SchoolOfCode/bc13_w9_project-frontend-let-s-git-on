@@ -1,12 +1,9 @@
 import React from 'react';
 import AnsButtonDisplay from '../AnsButtonDisplay/AnsButtonDisplay';
-import ImageComponent from '../ImageComponent/ImageComponent.js';
 
-import './Question1.css';
-import images from '../../images/bear.png';
-import images2 from '../../images/bull.png';
-import images3 from '../../images/elephant.png';
-import images4 from '../../images/wolf.png';
+import ImgByQuestion from '../ImageComponent/ImgByQuestion';
+
+import './QuestionCard.css';
 
 //Refactoring plan:
 //import all CSS files and assign to a variable.
@@ -15,6 +12,9 @@ import images4 from '../../images/wolf.png';
 //each  question has its own image import?
 //perhaps useEffect to render the page for each question
 //get question & answers from db (instead of hard coding)
+//testing other components
+//option to not click next without selection option
+//refactor JSDoc comment specifically for React @component
 
 export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
 	const ansArr = [
@@ -47,12 +47,10 @@ export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
 	const question = `Imagine you are in a jungle and you have to fight one of these animals
     to get to freedom, which one do you choose?`;
 
-	const imgArrBear = ['bear-image', 'bear-image2', 'bear-image3'];
-	const imgArrEle = ['elephant', 'elephant2'];
-
 	return (
-		<div id="1" className="question">
-			<h2 className="longerQ">{question}</h2>
+		<div id="1" className={'question'}>
+			{/*to refactor id and className for div and h2 to be passed on as props. */}
+			<h2 className="Q1">{question}</h2>
 			<AnsButtonDisplay
 				handleAnswer={handleAnswer}
 				ansArr={ansArr.slice(0, 3)}
@@ -67,43 +65,8 @@ export default function QuestionCard({ handleNextQuestion, handleAnswer }) {
 				next
 			</button>
 
-			{imgArrBear.map((className) => {
-				return <ImageComponent src={images} className={className} alt="bear" />;
-			})}
-
-			{imgArrEle.map((className) => {
-				return (
-					<ImageComponent src={images3} className={className} alt="elephant" />
-				);
-			})}
-			{/* <img src={images} className="bear-image" alt="bear" />
-			<img src={images} className="bear-image2" alt="bear" />
-			<img src={images} className="bear-image3" alt="bear" /> */}
-			<img src={images2} className="bull" alt="bull" />
-			{/* <img src={images3} className="elephant" alt="elephant" />
-			<img src={images3} className="elephant2" alt="elephant" /> */}
-			<img src={images4} className="wolf" alt="wolf" />
+			<ImgByQuestion qID={1} />
+			{/* to refactor id as prop/state */}
 		</div>
 	);
-}
-
-{
-	/* <button onClick={handleAnswer} id="1" className="firstThreeBtn">
-				Gorilla
-			</button>
-			<button onClick={handleAnswer} id="2" className="firstThreeBtn">
-				Bear
-			</button>
-			<button onClick={handleAnswer} id="3" className="firstThreeBtn">
-				Wolf
-			</button>
-			<button onClick={handleAnswer} id="4" className="SecondThreeBtn">
-				Anaconda
-			</button>
-			<button onClick={handleAnswer} id="5" className="SecondThreeBtn">
-				Rhino
-			</button>
-			<button onClick={handleAnswer} id="6" className="SecondThreeBtn">
-				Kangaroo
-			</button> */
 }

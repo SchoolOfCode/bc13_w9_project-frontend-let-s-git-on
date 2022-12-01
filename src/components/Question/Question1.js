@@ -14,7 +14,7 @@ import images4 from '../../images/wolf.png';
 export default function Question1({ handleNextQuestion, handleAnswer }) {
 	return (
 		<div id="1" className="question">
-			<h2 className="longerQ">
+			<h2 className="Q1">
 				Imagine you are in a jungle and you have to fight one of these animals
 				to get to freedom, which one do you choose?
 			</h2>

@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Russo+One&display=swap');
+
+.question {
+	text-align: center;
+	background: black;
+	/* background-image: linear-gradient(#B5179E,#7209B7, #560BAD); */
+	height: 100vh;
+	width: 100%;
+	margin: 0;
+	cursor: pointer;
+}
+
+.Q1 {
+	text-align: center;
+	margin: 0;
+	padding: 200px 330px 50px 330px;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 30px;
+	color: #ff00d9;
+}
