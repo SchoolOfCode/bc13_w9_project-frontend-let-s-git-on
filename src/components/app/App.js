@@ -107,8 +107,11 @@ function App() {
 	 * @returns {number} updated question number
 	 */
 	function handleNextQuestion() {
+		if (answer.length > 0) {
 		sendAnswer(userNumber, questionID, answer);
-		return setQuestion(question + 1);
+		 setQuestion(question + 1)
+		 setAnswer('');
+	};
 		//return console.log(question)
 	}
 
