@@ -1,4 +1,5 @@
-.firstThreeBtn {
+/* Question 1 styles */
+.Q1firstThreeBtn {
 	padding: 10px 200px 10px 5px;
 	display: block;
 	width: 190px;
@@ -9,7 +10,7 @@
 	color: white;
 	background-color: black;
 }
-.SecondThreeBtn {
+.Q1SecondThreeBtn {
 	padding: 10px 200px 10px 5px;
 	display: block;
 	width: 190px;
@@ -22,13 +23,167 @@
 	background-color: black;
 }
 
-.firstThreeBtn:hover,
-.firstThreeBtn:active,
-.firstThreeBtn:focus {
+.Q1firstThreeBtn:hover,
+.Q1firstThreeBtn:active,
+.Q1firstThreeBtn:focus {
 	background-color: #ff00d9;
 }
-.SecondThreeBtn:hover,
-.SecondThreeBtn:active,
-.SecondThreeBtn:focus {
+.Q1SecondThreeBtn:hover,
+.Q1SecondThreeBtn:active,
+.Q1SecondThreeBtn:focus {
 	background-color: #ff00d9;
+}
+
+/* Question 2 styles */
+.Q2firstThreeBtn {
+	padding: 10px 10px 10px 5px;
+	text-align: left;
+	display: block;
+	width: 230px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	right: 90px;
+	border: 2.5px greenyellow solid;
+	color: white;
+	background-color: black;
+}
+
+.Q2SecondThreeBtn {
+	padding: 10px 10px 10px 5px;
+	text-align: left;
+	display: block;
+	width: 230px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	left: 170px;
+	bottom: 155px;
+	border: 2.5px greenyellow solid;
+	color: white;
+	background-color: black;
+}
+
+.Q2firstThreeBtn:hover,
+.Q2firstThreeBtn:active,
+.Q2firstThreeBtn:focus {
+	background-color: greenyellow;
+	color: black;
+}
+
+.Q2SecondThreeBtn:hover,
+.Q2SecondThreeBtn:active,
+.Q2SecondThreeBtn:focus {
+	background-color: greenyellow;
+	color: black;
+}
+
+/* Q3 styles */
+.Q3firstThreeBtn {
+	padding: 10px 200px 10px 5px;
+	display: block;
+	width: 190px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	right: 90px;
+	border: 2.5px blueviolet solid;
+	color: white;
+	background-color: black;
+}
+.Q3SecondThreeBtn {
+	padding: 10px 200px 10px 5px;
+	display: block;
+	width: 190px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	left: 170px;
+	bottom: 155px;
+	border: 2.5px blueviolet solid;
+	color: white;
+	background-color: black;
+}
+.Q3firstThreeBtn:hover,
+.Q3firstThreeBtn:active,
+.Q3firstThreeBtn:focus {
+	background-color: blueviolet;
+}
+.Q3SecondThreeBtn:hover,
+.Q3SecondThreeBtn:active,
+.Q3SecondThreeBtn:focus {
+	background-color: blueviolet;
+}
+
+/* Q4 styles */
+.Q4firstThreeBtn {
+	padding: 10px 80px 10px 5px;
+	display: block;
+	width: 280px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	right: 90px;
+	border: 2.5px rgb(255, 77, 0) solid;
+	color: white;
+	background-color: black;
+	text-align: left;
+}
+.Q4SecondThreeBtn {
+	padding: 10px 80px 10px 5px;
+	display: block;
+	width: 280px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	left: 240px;
+	bottom: 202px;
+	border: 2.5px rgb(255, 77, 0) solid;
+	color: white;
+	background-color: black;
+	text-align: left;
+}
+.Q4firstThreeBtn:hover,
+.Q4firstThreeBtn:active,
+.Q4firstThreeBtn:focus {
+	background-color: rgb(255, 77, 0);
+	color: black;
+}
+.Q4SecondThreeBtn:hover,
+.Q4SecondThreeBtn:active,
+.Q4SecondThreeBtn:focus {
+	background-color: rgb(255, 77, 0);
+	color: black;
+}
+
+/* Q5 styles */
+
+.Q5firstThreeBtn {
+	padding: 10px 200px 10px 5px;
+	display: block;
+	width: 190px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	right: 140px;
+	border: 2.5px aqua solid;
+	color: white;
+	background-color: black;
+}
+.Q5SecondThreeBtn {
+	padding: 10px 200px 10px 5px;
+	display: block;
+	width: 190px;
+	margin: 10px auto 0px auto;
+	position: relative;
+	left: 120px;
+	bottom: 155px;
+	border: 2.5px aqua solid;
+	color: white;
+	background-color: black;
+}
+.Q5firstThreeBtn:hover,
+.Q5firstThreeBtn:active,
+.Q5firstThreeBtn:focus {
+	background-color: aqua;
+	color: black;
+}
+.Q5SecondThreeBtn:hover,
+.Q5SecondThreeBtn:active,
+.Q5SecondThreeBtn:focus {
+	background-color: aqua;
+	color: black;
 }

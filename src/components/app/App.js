@@ -4,12 +4,8 @@ import NicknameInput from '../NicknameInput/NicknameInput';
 import SelectionMenu from '../SelectionMenu/SelectionMenu';
 
 import QuestionCard from '../Question/QuestionCard.js';
-import Question1 from '../Question/Question1';
-import Question2 from '../Question/Question2';
-import Question3 from '../Question/Question3';
-import Question4 from '../Question/Question4';
-import Question5 from '../Question/Question5';
 import ResultsPage from '../ResultsPage/ResultsPage';
+import { questionArr } from '../../questionData/questionData.js'; //This is an array of questions and multichoice answers (as database backup)
 
 //to simplify the code, lines 5-9 can be imported with a single line?
 //create a Question component and reuse the same component, passing different props
@@ -57,7 +53,6 @@ function App() {
 		console.log(userId);
 		// return response.json()
 	}
-
 	/**
 	 *This function sends an API POST request to the server to store the player's answer to database.
   - Request body contains an object with keys 'playerID', 'question', and 'answer'
@@ -152,34 +147,44 @@ function App() {
 	) {
 		return (
 			<QuestionCard
+				qid={question}
+				qObj={questionArr[question - 1]}
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>
 		);
 	} else if (question === 2) {
 		return (
-			<Question2
+			<QuestionCard
+				qid={question}
+				qObj={questionArr[question - 1]}
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>
 		);
 	} else if (question === 3) {
 		return (
-			<Question3
+			<QuestionCard
+				qid={question}
+				qObj={questionArr[question - 1]}
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>
 		);
 	} else if (question === 4) {
 		return (
-			<Question4
+			<QuestionCard
+				qid={question}
+				qObj={questionArr[question - 1]}
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>
 		);
 	} else if (question === 5) {
 		return (
-			<Question5
+			<QuestionCard
+				qid={question}
+				qObj={questionArr[question - 1]}
 				handleAnswer={handleAnswer}
 				handleNextQuestion={handleNextQuestion}
 			/>

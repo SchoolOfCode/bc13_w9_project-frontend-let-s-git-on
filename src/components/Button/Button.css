@@ -1,0 +1,17 @@
+.nextBtn {
+	background-color: black;
+	font-family: 'Russo One', sans-serif;
+	color: grey;
+	position: absolute;
+	right: 110px;
+	bottom: 60px;
+	font-size: 30px;
+	font-family: 'Bebas Neue', cursive;
+	/* border: 2px white solid; */
+	padding: 10px 30px 10px 30px;
+}
+
+.nextBtn:hover {
+	font-size: 25px;
+	color: white;
+}
