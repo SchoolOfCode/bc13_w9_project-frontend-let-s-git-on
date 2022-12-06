@@ -16,15 +16,15 @@
 .Q2{
     text-align: center;
     margin:0;
-    padding: 200px 240px 50px 330px;
+    padding: 300px 240px 50px 330px;
     font-family: 'Bebas Neue', cursive;
-    font-size: 30px ;
+    font-size: 40px ;
     color: greenyellow ;      
 }
 
 
 .Q2firstThreeBtn{
-    padding: 10px 10px 10px 5px;
+    padding: 10px 10px 10px 35px;
     text-align: left;
     display: block;
     width: 230px;
@@ -34,7 +34,7 @@
     border: 2.5px greenyellow solid;
     color: white;
     background-color: black;
-    
+    font-size: 20px;
 
 }
 
@@ -46,10 +46,11 @@
     margin: 10px auto 0px auto;
     position: relative;
     left:170px;
-    bottom: 155px;
+    bottom: 175px;
     border: 2.5px greenyellow solid;
     color: white;
     background-color: black;
+    font-size: 20px;
 
 
 }

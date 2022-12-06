@@ -1,6 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap');
 
+.user-input{
+    
+  font-family: 'Russo One', sans-serif;
+  font-size: 40px ;
+  background: -webkit-linear-gradient(rgb(194, 194, 255), rgb(213, 46, 251));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fade-in 4s linear ;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+} 
+
+@media (max-width: 652px){
+  .user-input {
+    font-size: 20px;
+  }
+}
+
+
+
 .btn {
   background-color: black;
   font-family: 'Russo One', sans-serif;
@@ -32,31 +54,9 @@
   @media (max-width: 652px){
     .btn:hover {
       font-size: 15px;
-      cursor: pointer;
+     
     }
   }
-
-.user-input{
-    
-    font-family: 'Russo One', sans-serif;
-    font-size: 40px ;
-    background: -webkit-linear-gradient(rgb(194, 194, 255), rgb(213, 46, 251));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fade-in 4s linear ;
-  }
-  @keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  } 
-
-  @media (max-width: 652px){
-    .user-input {
-      font-size: 20px;
-    }
-  }
-  
-
 
 #nicknameInput{
   border-radius: 25px;

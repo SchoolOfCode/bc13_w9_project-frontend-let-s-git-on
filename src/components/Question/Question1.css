@@ -1,28 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Russo+One&display=swap');
 
 
-.question{
-    text-align: center;
-    background: black;
-    /* background-image: linear-gradient(#B5179E,#7209B7, #560BAD); */
-    height: 100vh;
-    width: 100%;
-    margin: 0;
-    cursor: pointer;       
-}
 
 .longerQ{
     text-align: center;
     margin:0;
-    padding: 200px 330px 50px 330px;
+    padding: 300px 330px 50px 330px;
     font-family: 'Bebas Neue', cursive;
-    font-size: 30px ;
+    font-size: 40px ;
     color: #ff00d9;;
 }
 
 .firstThreeBtn{
     padding: 10px 200px 10px 5px;
-    display: block;
+    display: flex;
     width: 190px;
     margin: 10px auto 0px auto;
     position: relative;
@@ -30,19 +21,21 @@
     border: 2.5px #ff00d9 solid;
     color: white;
     background-color: black;
+    font-size: 20px;
     
 }
 .SecondThreeBtn{
     padding: 10px 200px 10px 5px;
-    display: block;
+    display: flex;
     width: 190px;
     margin: 10px auto 0px auto;
     position: relative;
     left:170px;
-    bottom: 155px;
+    bottom: 175px;
     border: 2.5px #ff00d9 solid;
     color: white;
     background-color:black;
+    font-size: 20px;
 }
 .firstThreeBtn:hover, .firstThreeBtn:active, .firstThreeBtn:focus{
     background-color: #ff00d9;

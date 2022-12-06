@@ -4,7 +4,6 @@
 .question{
     text-align: center;
     background: black;
-    /* background-image: linear-gradient(#B5179E,#7209B7, #560BAD); */
     height: 100vh;
     width: 100%;
     margin: 0;
@@ -14,36 +13,36 @@
 
 .Q5{
     text-align: center;
-    margin:0;
-    padding: 200px 330px 50px 330px;
+    padding: 300px 330px 50px 330px;
     font-family: 'Bebas Neue', cursive;
-    font-size: 30px ;
+    font-size: 40px ;
     color: aqua;
 }
 
 .Q5firstThreeBtn{
     padding: 10px 200px 10px 5px;
-    display: block;
+    display: flex;
     width: 190px;
     margin: 10px auto 0px auto;
     position: relative;
     right:140px;
     border: 2.5px aqua solid;
     color: white;
-    background-color: black;
-    
+    background-color: transparent;
+    font-size: 20px;
 }
 .Q5SecondThreeBtn{
     padding: 10px 200px 10px 5px;
-    display: block;
+    display: flex;
     width: 190px;
     margin: 10px auto 0px auto;
     position: relative;
     left:120px;
-    bottom: 155px;
+    bottom: 175px;
     border: 2.5px aqua solid;
     color: white;
-    background-color:black;
+    background-color:transparent;
+    font-size: 20px;
 }
 .Q5firstThreeBtn:hover, .Q5firstThreeBtn:active, .Q5firstThreeBtn:focus{
     background-color: aqua;

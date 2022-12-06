@@ -19,33 +19,12 @@ export default function Question1({ handleNextQuestion, handleAnswer }) {
 				to get to freedom, which one do you choose?
 			</h2>
 
-<<<<<<< HEAD
-			<button onClick={handleAnswer} id="1" className="firstThreeBtn">
-				Gorilla
-			</button>
-			<button onClick={handleAnswer} id="2" className="firstThreeBtn">
-				Bear
-			</button>
-			<button onClick={handleAnswer} id="3" className="firstThreeBtn">
-				Wolf
-			</button>
-			<button onClick={handleAnswer} id="4" className="SecondThreeBtn">
-				Anaconda
-			</button>
-			<button onClick={handleAnswer} id="5" className="SecondThreeBtn">
-				Rhino
-			</button>
-			<button onClick={handleAnswer} id="6" className="SecondThreeBtn">
-				Kangaroo
-			</button>
-=======
         <button onClick={handleAnswer} data-cy="1" id='1' className="firstThreeBtn">Gorilla</button>
         <button onClick={handleAnswer} id='2' className="firstThreeBtn">Bear</button>
         <button onClick={handleAnswer} id='3' className="firstThreeBtn">Wolf</button>
         <button onClick={handleAnswer} id='4' className="SecondThreeBtn">Anaconda</button>
         <button onClick={handleAnswer} id='5' className="SecondThreeBtn">Rhino</button>
         <button onClick={handleAnswer} id='6' className="SecondThreeBtn">Kangaroo</button>
->>>>>>> 7ddffc95caf7c81f8b8c4a90ff3fbaa3299e0958
 
 			<button onClick={handleNextQuestion} className="nextBtn">
 				next

@@ -3,9 +3,9 @@
 .Q3{
     text-align: center;
     margin:0;
-    padding: 200px 250px 50px 330px;
+    padding: 300px 250px 50px 330px;
     font-family: 'Bebas Neue', cursive;
-    font-size: 30px ;
+    font-size: 40px ;
     color: blueviolet; 
     animation: bounce-in-right 2s linear;
 }
@@ -32,7 +32,7 @@
     border: 2.5px blueviolet solid;
     color: white;
     background-color: black;
-    
+    font-size: 20px;
 }
 .Q3SecondThreeBtn{
     padding: 10px 200px 10px 5px;
@@ -41,10 +41,11 @@
     margin: 10px auto 0px auto;
     position: relative;
     left:170px;
-    bottom: 155px;
+    bottom: 175px;
     border: 2.5px blueviolet solid;
     color: white;
     background-color:black;
+	font-size: 20px;
 }
 .Q3firstThreeBtn:hover, .Q3firstThreeBtn:active, .Q3firstThreeBtn:focus{
     background-color: blueviolet;
