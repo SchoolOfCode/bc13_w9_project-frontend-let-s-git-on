@@ -7,9 +7,6 @@ import QuestionCard from '../Question/QuestionCard.js';
 import ResultsPage from '../ResultsPage/ResultsPage';
 import { questionArr } from '../../questionData/questionData.js'; //This is an array of questions and multichoice answers (as database backup)
 
-//to simplify the code, lines 5-9 can be imported with a single line?
-//create a Question component and reuse the same component, passing different props
-
 /**
  *
  *This function is a main parent component that renders its children components and passing into them
